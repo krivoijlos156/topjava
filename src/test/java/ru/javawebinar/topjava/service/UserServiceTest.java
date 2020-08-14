@@ -1,5 +1,6 @@
 package ru.javawebinar.topjava.service;
 
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import ru.javawebinar.topjava.model.Role;
 import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertThrows;
@@ -27,6 +29,9 @@ public class UserServiceTest {
 
     @Autowired
     private UserService service;
+
+    @Rule
+    public TimeTestWatcher watcher = new TimeTestWatcher(new ArrayList<>());
 
     @Test
     public void create() throws Exception {
