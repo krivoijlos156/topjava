@@ -2,10 +2,6 @@ package ru.javawebinar.topjava.web;
 
 
 import org.junit.jupiter.api.Test;
-import ru.javawebinar.topjava.model.User;
-import org.assertj.core.matcher.AssertionMatcher;
-
-import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
